@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>문서 제목</title>
+    <title>List of lectures</title>
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+       .title {
+        width: 80px; /* 너비를 픽셀 단위로 지정 */
+        height: 80px;
+        margin-left: auto;
+      }
+
+      .tt {
+        font-size: 1.5rem;
+      
+        display: flex; /* 수정: 요소를 가로로 나란히 배치합니다 */
+        align-items: center; /* 추가: 요소를 수직 가운데로 정렬합니다 */
+        margin-bottom: 10px;
+      }
+      body{
+        margin: 0 auto;
+        max-width: 800px; /* 최대 너비를 지정하여 화면이 너무 넓어지지 않도록 제한 */
+        padding: 0 20px; /* 내용과 화면 끝 사이의 공백을 추가 */
+      }
+
+      .list{
+        padding-left: 10px;
+      }
+
+    </style>
 </head>
-<body>
-    <h1>제목</h1>
-    <p>본문 내용</p>
+<body >
+  <div class="tt"> <!-- 수정: 클래스 추가 -->
+    <img class="photo" src="./book.svg" alt="" width="40" height="40">
+    <text class="list">List of lectures</text>
+  </div>
+
+    <div class = "menu">
+        <a href="https://superlative-puffpuff-1b5ab4.netlify.app/nostyle.html"><button class="menu-button">ADD</button></a>
+        <button class="menu-button">버튼 2</button>
+        <button class="menu-button">버튼 3</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Semester</th>
+            <th scope="col">Name</th>
+            <th scope="col">Professeor</th>
+            <th scope="col">grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2</th>
+            <td>공학설계입문</td>
+            <td>김기석</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>자바 프로그래밍</td>
+            <td>남재창</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>OSS</td>
+            <td>장소연</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>데이타구조</td>
+            <td>김영섭</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>C프로그래밍</td>
+            <td>김호준</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>C프로그래밍 실습</td>
+            <td>김광</td>
+            <td>A</td>
+          </tr>
+        </tbody>
+      </table>
+    <div>
+
+    </div>
+
+
 </body>
 </html>

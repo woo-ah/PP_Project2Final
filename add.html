@@ -1,10 +1,133 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>���� ����</title>
-</head>
-<body>
-    <h1>add</h1>
-    <p>���� ����</p>
-</body>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+    body {
+        text-align: center; /* 가운데 정렬 스타일 추가 */
+        display: flex;
+        align-items: center;
+        padding-top: 70px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+        margin-top: 40px;
+    }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    } 
+
+    .form-signin{
+        font-weight: 400;
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+       
+        padding: 30px;
+        margin: auto;
+    }
+    .form-control{
+        box-sizing: border-box;
+        height: 48px;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 0.25rem; 
+        border-color: #ccc;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 1.7em; 
+        margin-bottom: 3; 
+    }
+
+    .photo{
+        margin-bottom: 4;
+        border-radius: 0.25rem;
+    }
+
+    .button{
+      
+        font-size: 1.25rem; /* 대략적으로 btn-lg와 동일한 크기입니다. */
+        padding: 10px 20px; /* btn-lg와 비슷한 패딩입니다. */
+        background-color: #007bff; /* btn-primary의 색상입니다. */
+        display: block; /* btn-block과 동일한 효과입니다. */
+        width: 100%; /* btn-block과 동일한 효과입니다. */
+        border: none; /* 테두리를 없애기 위해 사용합니다. */
+        border-radius: 0.25rem; /* 선택적으로 둥근 모서리를 추가할 수 있습니다. */
+        color: #fff; /* 텍스트 색상을 지정합니다. */
+        text-align: center; /* 텍스트를 가운데 정렬합니다. */
+        text-decoration: none; /* 링크 효과를 제거합니다. */
+        cursor: pointer; /* 커서 스타일을 변경합니다. */
+        height: 50px;
+    }
+
+    .time{
+        margin-top: 5;
+        margin-bottom: 3;
+        color:grey;
+    }
+
+    .check{
+        margin-bottom: 30px;
+    }
+
+    </style>
+
+
+  </head>
+  <body>
+    
+<form class="form-signin">
+  
+  <img class="photo" src="./Fu.png" alt="" width="100" height="100">
+  <h1 class="title">추가해주세요!</h1>
+
+  <label for="inputPassword" class="sr-only"></label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="학기" required>
+
+  <label for="inputPassword" class="sr-only"></label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="과목명" required>
+
+  <label for="inputPassword" class="sr-only"></label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="교수명" required>
+
+  <label for="inputPassword" class="sr-only"></label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="성적" required>
+
+
+  <button class="button" type="submit" onclick="alert('게시물이 추가됩니다!')">추가</button>
+  <p class="time"> 22200465 우지윤</p>
+</form>
+
+
+    
+  </body>
 </html>
