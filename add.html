@@ -11,6 +11,12 @@
 
   </head>
   <body>
+
+    
+    <div class = "menu">
+      <a href="https://stalwart-travesseiro-014daa.netlify.app"><button class="menu-button">Home</button></a>
+    </div>
+
     
 <form class="form-signin">
   
@@ -79,8 +85,10 @@ function call_confirm(){
       }
       
     
-    alert('게시물이 추가됩니다!');
-    window.location.href = 'https://stalwart-travesseiro-014daa.netlify.app/'; 
+      if(confirm("게시물을 추가할까요?")){
+      
+        window.location.href = './index.html'; 
+    }
 
     }
   
