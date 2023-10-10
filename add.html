@@ -46,6 +46,7 @@ function call_confirm(){
       let subject = document.querySelector('.subject').value;
       let professor = document.querySelector('.professor').value;
       let grade = document.querySelector('.grade').value;
+      let validGrades = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'P', 'F'];
 
       if(semester === '' || subject === '' || professor === '' || grade === ''){
         alert("모든 항목을 정확히 다시 작성하세요.");
@@ -71,15 +72,15 @@ function call_confirm(){
       }
 
 
-      let validGrades = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'P', 'F'];
+     
       if(!validGrades.includes(grade)){
-        alert("올바른 성적을 입력하세요.(대문자)");
+        alert("대문자로 올바른 성적을 입력하세요.");
         return;
       }
       
     
     alert('게시물이 추가됩니다!');
-    window.location.href = 'https://stalwart-travesseiro-014daa.netlify.app/'; // 이 부분을 원하는 링크 주소로 변경하세요
+    window.location.href = 'https://stalwart-travesseiro-014daa.netlify.app/'; 
 
     }
   
