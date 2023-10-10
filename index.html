@@ -29,6 +29,13 @@
         padding-left: 10px;
       }
 
+      .link {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+
+   
     </style>
 </head>
 <body >
@@ -42,6 +49,7 @@
         <button class="menu-button">버튼 2</button>
         <button class="menu-button">버튼 3</button>
     </div>
+
     <table class="table table-striped">
         <thead>
           <tr>
@@ -52,37 +60,37 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr onclick="goToView('lecture1')">
             <th scope="row">2</th>
             <td>공학설계입문</td>
             <td>김기석</td>
             <td>A+</td>
           </tr>
-          <tr>
+          <tr onclick="goToView('lecture2')">
             <th scope="row">3</th>
             <td>자바 프로그래밍</td>
             <td>남재창</td>
             <td>B+</td>
           </tr>
-          <tr>
+          <tr onclick="goToView('lecture3')">
             <th scope="row">3</th>
             <td>OSS</td>
             <td>장소연</td>
             <td>B+</td>
           </tr>
-          <tr>
+          <tr onclick="goToView('lecture4')">
             <th scope="row">3</th>
             <td>데이타구조</td>
             <td>김영섭</td>
             <td>A+</td>
           </tr>
-          <tr>
+          <tr onclick="goToView('lecture5')">
             <th scope="row">2</th>
             <td>C프로그래밍</td>
             <td>김호준</td>
             <td>B+</td>
           </tr>
-          <tr>
+          <tr onclick="goToView('lecture6')">
             <th scope="row">2</th>
             <td>C프로그래밍 실습</td>
             <td>김광</td>
@@ -90,9 +98,15 @@
           </tr>
         </tbody>
       </table>
-    <div>
+   
+  
 
-    </div>
+<script>
+  function goToView(lectureId) {
+      window.location.href = `./view.html#${lectureId}`;
+   
+  }
+</script>
 
 
 </body>

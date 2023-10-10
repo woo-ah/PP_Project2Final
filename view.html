@@ -1,69 +1,316 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>List of lectures</title>
+    <title>View Lecture</title>
     <link rel="stylesheet" href="my.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
-    <div>
-        <text>?List of lectures</text>
-    </div>
+
+    <style>
+        
     
-    <p>본문 내용</p>
- 
-    <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Semester</th>
-            <th scope="col">Name</th>
-            <th scope="col">Professeor</th>
-            <th scope="col">grade</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">2</th>
-            <td>공학설계입문</td>
-            <td>김기석</td>
-            <td>A+</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>자바 프로그래밍</td>
-            <td>남재창</td>
-            <td>B+</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>OSS</td>
-            <td>장소연</td>
-            <td>B+</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>데이타구조</td>
-            <td>김영섭</td>
-            <td>A+</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>C프로그래밍</td>
-            <td>김호준</td>
-            <td>B+</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>C프로그래밍 실습</td>
-            <td>김광</td>
-            <td>A</td>
-          </tr>
-        </tbody>
-      </table>
-    <div>
 
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+    body {
+        text-align: center; /* 가운데 정렬 스타일 추가 */
+        display: flex;
+        align-items: center;
+        padding-top: 70px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+        margin: 0 auto;
+      
+    }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    } 
+
+    .form-signin{
+      position: absolute; /* 추가: form을 절대 위치로 설정 */
+      top: 50%; /* 추가: 화면 상단에서 50% 위치로 이동 */
+      left: 50%; /* 추가: 화면 좌측에서 50% 위치로 이동 */
+      transform: translate(-50%, -50%); /* 추가: 중앙 정렬 */
+      width: 80%; /* Adjusted width */
+      max-width: 300px; /* Optional: Added a max-width for larger screens */
+  
+    }
+    .form-control{
+        box-sizing: border-box;
+        height: 48px;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 0.25rem; 
+        border-color: #ccc;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 1.7em; 
+ 
+        margin-bottom: 10px;
+    }
+
+    .photo{
+        margin-bottom: 10px;
+        border-radius: 0.25rem;
+    }
+
+    .button{
+        
+        font-size: 1.25rem; /* 대략적으로 btn-lg와 동일한 크기입니다. */
+        padding: 10px 20px; /* btn-lg와 비슷한 패딩입니다. */
+        background-color: #007bff; /* btn-primary의 색상입니다. */
+        display: block; /* btn-block과 동일한 효과입니다. */
+        width: 100%; /* btn-block과 동일한 효과입니다. */
+        border: none; /* 테두리를 없애기 위해 사용합니다. */
+        border-radius: 0.25rem; /* 선택적으로 둥근 모서리를 추가할 수 있습니다. */
+        color: #fff; /* 텍스트 색상을 지정합니다. */
+        text-align: center; /* 텍스트를 가운데 정렬합니다. */
+        text-decoration: none; /* 링크 효과를 제거합니다. */
+        cursor: pointer; /* 커서 스타일을 변경합니다. */
+        height: 50px;
+        
+    }
+
+    .time{
+        margin-top: 20px;
+        margin-bottom: 3;
+        color:grey;
+    }
+
+    .check{
+        margin-bottom: 30px;
+    }
+
+    .lecture-section {
+        display: none;
+    }
+
+    .form-edit{
+        box-sizing: border-box;
+        height: 48px;
+        padding: 10px;
+       
+        width: 100%;
+        border-radius: 0.25rem; 
+        border-color: blue;
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+
+
+<body>
+
+  
+    <div id="lecture1" class="lecture-section"> 
+
+      <form class="form-signin">
+  
+        <img class="photo" src="./Fu.png" alt="" width="150" height="150">
+        <h1 class="title">추가해주세요!</h1>
+      
+        <text class="form-control">2</text>
+        <text class="form-control">공학설계입문</text>
+        <text class="form-control">김기석</text>
+        <text class="form-control">A+</text>
+        
+        
+        <text class="form-edit button" onclick="edit('lecture1')">수정</text>
+
+        <button class="button" type="submit" onclick="deletePost()">삭제</button>
+    
+        <p class="time"> 22200465 우지윤</p>
+      </form>
+      
+      
     </div>
 
+    <div id="lecture2" class="lecture-section"> 
+
+      <form class="form-signin">
+  
+        <img class="photo" src="./Fu.png" alt="" width="150" height="150">
+        <h1 class="title">추가해주세요!</h1>
+      
+        <text class="form-control">3</text>
+        <text class="form-control">자바 프로그래밍</text>
+        <text class="form-control">남재창</text>
+        <text class="form-control">B+</text>
+        
+        
+        <text class="form-edit button" onclick="edit('lecture1')">수정</text>
+
+        <button class="button" type="submit" onclick="deletePost()">삭제</button>
+    
+        <p class="time"> 22200465 우지윤</p>
+      </form>
+      
+      
+    </div>
+
+    <div id="lecture3" class="lecture-section"> 
+
+      <form class="form-signin">
+  
+        <img class="photo" src="./Fu.png" alt="" width="150" height="150">
+        <h1 class="title">추가해주세요!</h1>
+      
+        <text class="form-control">3</text>
+        <text class="form-control">OSS</text>
+        <text class="form-control">장소연</text>
+        <text class="form-control">B+</text>
+        
+        
+        <text class="form-edit button" onclick="edit('lecture1')">수정</text>
+
+        <button class="button" type="submit" onclick="deletePost()">삭제</button>
+    
+        <p class="time"> 22200465 우지윤</p>
+      </form>
+      
+      
+    </div>
+
+
+    <div id="lecture4" class="lecture-section"> 
+
+      <form class="form-signin">
+  
+        <img class="photo" src="./Fu.png" alt="" width="150" height="150">
+        <h1 class="title">추가해주세요!</h1>
+      
+        <text class="form-control">3</text>
+        <text class="form-control">데이타구조</text>
+        <text class="form-control">김영섭</text>
+        <text class="form-control">A+</text>
+        
+        
+        <text class="form-edit button" onclick="edit('lecture1')">수정</text>
+
+        <button class="button" type="submit" onclick="deletePost()">삭제</button>
+    
+        <p class="time"> 22200465 우지윤</p>
+      </form>
+      
+      
+    </div>
+
+
+    <div id="lecture5" class="lecture-section"> 
+
+      <form class="form-signin">
+  
+        <img class="photo" src="./Fu.png" alt="" width="150" height="150">
+        <h1 class="title">추가해주세요!</h1>
+      
+        <text class="form-control">2</text>
+        <text class="form-control">C프로그래밍</text>
+        <text class="form-control">김호준</text>
+        <text class="form-control">B+</text>
+        
+        
+        <text class="form-edit button" onclick="edit('lecture1')">수정</text>
+
+        <button class="button" type="submit" onclick="deletePost()">삭제</button>
+    
+        <p class="time"> 22200465 우지윤</p>
+      </form>
+      
+      
+    </div>
+
+
+    <div id="lecture6" class="lecture-section"> 
+
+      <form class="form-signin">
+  
+        <img class="photo" src="./Fu.png" alt="" width="150" height="150">
+        <h1 class="title">추가해주세요!</h1>
+      
+        <text class="form-control">2</text>
+        <text class="form-control">C프로그래밍 실십</text>
+        <text class="form-control">김광</text>
+        <text class="form-control">A</text>
+        
+        
+        <text class="form-edit button" onclick="edit('lecture1')">수정</text>
+
+        <button class="button" type="submit" onclick="deletePost()">삭제</button>
+    
+        <p class="time"> 22200465 우지윤</p>
+      </form>
+      
+      
+    </div>
+
+
+    <!-- 다른 강의 섹션들도 같은 방식으로 추가하세요 -->
+
+    
+    <script>
+
+    function call_confirm(){
+      
+      if(confirm("제출하시겠습니까?")){
+        alert("정상적으로 제출되었습니다.");
+      }else{
+        alert("제출실패");
+      }
+    }
+
+      function edit(lectureId) {
+            window.location.href = `./edit.html#${lectureId}`;
+        }
+
+        function deletePost(){
+      
+      if(confirm("게시물을 삭제할까요?")){
+        alert("삭제되었습니다.");
+      }else{
+        alert("삭제실패");
+      }
+    }
+
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            let sections = document.getElementsByClassName('lecture-section');
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            let lectureId = window.location.hash.substring(1);
+            let targetSection = document.getElementById(lectureId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        });
+  </script>
 
 </body>
 </html>
+
