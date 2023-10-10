@@ -31,15 +31,12 @@
 
 
 
-  <button class="button" type="submit" onclick="addPost()">추가</button>
-  
+  <button class="button" type="submit" onclick="call_confirm()">추가</button>
+
   <p class="time"> 22200465 우지윤</p>
 
 <script>
-function addPost() {
-    alert('게시물이 추가됩니다!');
-    window.location.href = 'https://stalwart-travesseiro-014daa.netlify.app/'; // 이 부분을 원하는 링크 주소로 변경하세요
-}
+
 
 
 
@@ -51,7 +48,7 @@ function call_confirm(){
       let grade = document.querySelector('.grade').value;
 
       if(semester === '' || subject === '' || professor === '' || grade === ''){
-        alert("모든 항목을 작성하세요.");
+        alert("모든 항목을 정확히 다시 작성하세요.");
         return;
       }
 
@@ -80,11 +77,12 @@ function call_confirm(){
         return;
       }
       
-      if(confirm("게시물을 수정할까요?")){
-        alert("수정되었습니다.");
-      }else{
-        alert("수정실패");
-      }
+    
+    alert('게시물이 추가됩니다!');
+    window.location.href = 'https://stalwart-travesseiro-014daa.netlify.app/'; // 이 부분을 원하는 링크 주소로 변경하세요
+
+
+
     }
   
 </script>
