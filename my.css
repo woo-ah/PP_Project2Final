@@ -16,9 +16,122 @@
 }
 
 .menu-button:hover {
-    background-color: #0056b3;
+    background-color: #006400;
 }
 
+  
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+body {
+    text-align: center; /* 가운데 정렬 스타일 추가 */
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+  
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+} 
+
+.form-signin{
+  position: absolute; /* 추가: form을 절대 위치로 설정 */
+  top: 50%; /* 추가: 화면 상단에서 50% 위치로 이동 */
+  left: 50%; /* 추가: 화면 좌측에서 50% 위치로 이동 */
+  transform: translate(-50%, -50%); /* 추가: 중앙 정렬 */
+  width: 80%; /* Adjusted width */
+  max-width: 300px; /* Optional: Added a max-width for larger screens */
+
+}
+.form-control{
+    box-sizing: border-box;
+    height: 48px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 0.25rem; 
+    border-color: #ccc;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 1.7em; 
+
+    margin-bottom: 10px;
+}
+
+.photo{
+    margin-bottom: 10px;
+    border-radius: 0.25rem;
+}
+
+.button{
+    
+    font-size: 1.25rem; /* 대략적으로 btn-lg와 동일한 크기입니다. */
+    padding: 10px 20px; /* btn-lg와 비슷한 패딩입니다. */
+    background-color: #006400; /* btn-primary의 색상입니다. */
+    display: block; /* btn-block과 동일한 효과입니다. */
+    width: 100%; /* btn-block과 동일한 효과입니다. */
+    border: none; /* 테두리를 없애기 위해 사용합니다. */
+    border-radius: 0.25rem; /* 선택적으로 둥근 모서리를 추가할 수 있습니다. */
+    color: #fff; /* 텍스트 색상을 지정합니다. */
+    text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    text-decoration: none; /* 링크 효과를 제거합니다. */
+    cursor: pointer; /* 커서 스타일을 변경합니다. */
+    height: 50px;
+    
+}
+
+.time{
+    margin-top: 20px;
+    margin-bottom: 3;
+    color:grey;
+}
+
+.check{
+    margin-bottom: 30px;
+}
+
+.lecture-section {
+    display: none;
+}
+
+.form-edit{
+    box-sizing: border-box;
+    height: 48px;
+    padding: 10px;
+   
+    width: 100%;
+    border-radius: 0.25rem; 
+    border-color: blue;
+    margin-bottom: 10px;
+}
 
 
 
